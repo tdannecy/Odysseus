@@ -5,13 +5,56 @@
 <head>
   <title>Odysseus - Web Browser for elementary OS</title>
   <style>
-    body {font: small sans-serif; color: #111;}
-    h1 {font-size: 130%;}
-    h2 {font-size: 120%;}
-    h3 {font-size: 110%;}
-    h4 {font-size: 100%;}
-    h5 {font-size: 90%;}
-    h6 {font-size: 80%;}
+body {
+    font: 14px sans-serif; /* Native sans-serif */
+    color: #333;
+}
+
+body.branded {
+    background: url(oddysseus:vitruvian-wave.svg) repeat-x;
+    background-position: 0 80%;
+}
+
+main {
+    max-width: 600px; /* almost 3 uppercase alphabets worth */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh
+}
+
+main h1, main h2, main h3, main h4 {
+    text-align: center;
+}
+
+/* These heading sizes are taken from the elementary Gtk theme
+    https://github.com/elementary/stylesheet/blob/master/gtk-3.0/granite-widgets.css#L378 .
+    They have been converted into percentages so that I could
+        increase the base font size.  */
+h1 {
+    font-size: 240%;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 180%;
+}
+
+h3 {
+    font-size: 110%;
+}
+
+h4 {
+    color: alpha(#333, 0.7);
+    font-weight: bold;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.4);
+    padding-bottom: 6px;
+    padding-top: 6px;
+}
+    
+    /* Not from oddysseus:butterick.css, but makes images more legible. */
+    img {max-width: 100%;}
   </style>
 </head>
 <body>
