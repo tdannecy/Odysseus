@@ -1,3 +1,0 @@
-{% trans %}The conditions we have set failed. {% endtrans %}
-
-{# I do not think WebKit sets any conditions #}

@@ -1,3 +1,0 @@
-<p>{% trans %}Something went wrong!{% endtrans %}</p>
-
-<p>{% trans %}But I don't understand what it was.{% endtrans %}</p>

@@ -1,3 +1,0 @@
-{% trans %}Precondition failed.{% endtrans %}
-
-{# I do not know what this means for a Web Browser -- Adrian Cochrane #}

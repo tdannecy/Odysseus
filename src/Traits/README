@@ -1,3 +1,0 @@
-Various behaviours added ontop of WebKit.WebView's. 
-
-These take the infrastructure offered by Services and register event handlers on the WebView to add useful behaviours. 

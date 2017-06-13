@@ -1,3 +1,0 @@
-{% trans %}Partial content received.{% endtrans %}
-
-{# This page should not show, as the response code implies it has content. #}
