@@ -69,11 +69,16 @@ header h2 {
 }
 
 header nav {
-    display: flexbox;
+    display: flex;
     clear: both;
-    background: thin solid lightgray;
+    background: lightgray;
 }
-header nav > * {border: thin solid gray;}
+header nav > * {
+    border: thin solid gray;
+    flex-grow: 1;
+    text-align: center;
+    padding: 4px;
+}
   </style>
 </head>
 <body>
