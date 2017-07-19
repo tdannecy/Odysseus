@@ -19,7 +19,7 @@ header: Blog
 <p>What has been going on in Odysseus development?</p>
 
 <main>
-  {% for post in posts %}
+  {% for post in site.posts %}
     <section>
         <h1><a href='{{ post.url | relative_url }}'>{{ post.header }}</a>
         <p><em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
