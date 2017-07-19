@@ -36,19 +36,9 @@ h1 {
     font-size: 240%;
 }
 
-header h1 {
-    float: left;
-    align: left;
-}
-
 h2 {
     font-weight: 300;
     font-size: 180%;
-}
-
-header h2 {
-    float: right;
-    align: right;
 }
 
 h3 {
@@ -65,12 +55,37 @@ h4 {
     
     /* Not from oddysseus:butterick.css, but makes images more legible. */
     img {max-width: 100%;}
+
+/* Header design - somewhat emulates headerbar and tabbars */
+    
+header h1 {
+    float: left;
+    align: left;
+}
+
+header h2 {
+    float: right;
+    align: right;
+}
+
+header nav {
+    display: flexbox;
+    clear: both;
+    background: thin solid lightgray;
+}
+header nav > * {border: thin solid gray;}
   </style>
 </head>
 <body>
   <header>
     <h1>Odysseus</h1>
     <h2>{{ page.header }}</h2>
+    <nav>
+      <a href="https://github.com/alcinnz/Odysseus/">GitHub</a>
+      <a href='{{ "/blog.html" | relative_url }}'>Blog</a>
+      <strong>Support</strong>
+      <strong>Developer Info</strong>
+    </nav>
   </header>
   {{ content }}
 </body>
