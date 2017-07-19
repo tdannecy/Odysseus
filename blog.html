@@ -21,7 +21,7 @@ header: Blog
 <main>
   {% for post in site.posts %}
     <section>
-        <h1><a href='{{ post.url | relative_url }}'>{{ post.header }}</a>
+      <h1><a href='{{ post.url | relative_url }}'>{{ post.title }}</a></h3>
         <p><em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
         {{ post.excerpt }}
     </section>
