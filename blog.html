@@ -1,0 +1,29 @@
+---
+layout: page
+title: Blog for Odysseus Web Browser
+header: Blog
+---
+
+<style>
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section {
+    width: 200px;
+    height: 400px;
+    border: thin solid lightgray;
+  }
+</style>
+
+<p>What has been going on in Odysseus development?</p>
+
+<main>
+  {% for post in posts %}
+    <section>
+        <h1><a href='{{ post.url | relative_url }}'>{{ post.header }}</a>
+        <p><em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
+        {{ post.excerpt }}
+    </section>
+  {% endfor %}
+</main>
