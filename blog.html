@@ -5,11 +5,6 @@ header: Blog
 ---
 
 <style>
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
   section {
     width: 300px;
     height: 300px;
@@ -17,17 +12,16 @@ header: Blog
     padding: 10px;
     margin: 5px;
     overflow: clip;
+    float: left;
   }
 </style>
 
 <p>What has been going on in Odysseus development?</p>
 
-<main>
-  {% for post in site.posts %}
-    <section>
-      <h1><a href='{{ post.url | relative_url }}'>{{ post.posttitle }}</a></h3>
-        <p><em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
-        {{ post.excerpt }}
-    </section>
-  {% endfor %}
-</main>
+{% for post in site.posts %}
+  <section>
+    <h1><a href='{{ post.url | relative_url }}'>{{ post.posttitle }}</a></h3>
+      <p><em>{{ post.date | date: "%b %-d, %Y" }}</em></p>
+      {{ post.excerpt }}
+  </section>
+{% endfor %}
