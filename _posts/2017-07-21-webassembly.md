@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "WebASM :: Odysseus Development Blog"
+title: WebASM — Odysseus Development Blog
 posttitle: WebAssembly
-header: "21st July 2017 :: Adrian Cochrane"
+header: 21st July 2017 — Adrian Cochrane
 date: 2017-07-21 11:46:38 1200
 categories: standards
 ---
