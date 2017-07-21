@@ -23,7 +23,7 @@ Finally as mentioned in the project README I believe users should have control o
 
 I quite agree with the views expressed here (as well as the previous links):
 
-<video controls src="https://fpdl.vimeocdn.com/vimeo-prod-skyfire-std-us/01/4561/5/147806338/448859099.mp4?token=1500514877-0xea5eaa348c104aaa209bb3235f0a4a4f70926cc7">http://www.webdirections.org/blog/the-website-obesity-crisis/</video>
+<video controls src="https://ipfs.io/ipfs/QmYeE6HBrtASHs3N3y1hqVQPd919jYTuiPG4bSRwk4DXKr">http://www.webdirections.org/blog/the-website-obesity-crisis/</video>
 
 [The Indie Manifesto](https://ind.ie/ethical-design/)
 
