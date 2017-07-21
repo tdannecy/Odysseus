@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "First! Odysseus Development Blog"
+title: First! Odysseus Development Blog
 posttitle: First!
-header: "19th July 2017 :: Adrian Cochrane"
-date: "2017-07-19 21:31:53 +1200"
+header: 19th July 2017 — Adrian Cochrane
+date: 2017-07-19 21:31:53 +1200
 categories: meta
 ---
 
