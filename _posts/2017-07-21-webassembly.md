@@ -18,3 +18,9 @@ At the sametime I don't think it'll be all that useful, as the applications I've
 As for whether this is a burden for browsers to implement, my understanding is that it's not. WebAssembly is a trivial language to parse and interpret, and if your JavaScript engine implements basic optimizations WebAssembly will almost immediately be fully optimized. Furthermore WebKit essentially already had it implemented as a closer-to-the-metal yet cross-platform language to implement their JavaScript interpretor in. 
 
 In summary, I don't think WebAssembly is a major threat to end-users or complication to browser engines. As such I won't be blocking it. But I do think it's a worthless standard that will not get any serious use. 
+
+---
+
+# Comments 
+
+Feel free to [edit this page](https://github.com/alcinnz/Odysseus/edit/gh-pages/_posts/2017-07-21-webassembly.md) to put your comment below. Sorry this couldn't be more convenient.
