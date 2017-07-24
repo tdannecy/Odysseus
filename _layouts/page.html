@@ -104,6 +104,7 @@ header nav > *:after {
 .icon-info:after {content: url({{ "/info.png" | relative_url }});}
 .icon-blog:after {content: url({{ "/blog.png" | relative_url }});}
 .icon-help:after {content: url({{ "/help.png" | relative_url }});}
+.icon-developer:after {content: url({{ "/developer.png" | relative_url}});}
   </style>
 </head>
 <body>
@@ -115,7 +116,7 @@ header nav > *:after {
       <a class="icon-info" href='{{ "/" | relative_url }}'>About/Overview</a>
       <a class="icon-blog" href='{{ "/blog.html" | relative_url }}'>Blog</a>
       <a class="icon-help" href="https://alcinnz.github.io/Odysseus-support/">Support</a>
-      <strong>Developer Info</strong>
+      <strong class="icon-developer">Developer Info</strong>
     </nav>
   </header>
   {{ content }}
