@@ -90,6 +90,11 @@ header nav > * {
     text-align: center;
     padding: 4px;
 }
+
+/* Icons */
+.icon-info:after {content: url({{ "/info.png" | relative_url }});}
+.icon-blog:after {content: url({{ "/blog.png" | relative_url }});}
+.icon-help:after {content: url({{ "/help.png" | relative_url }});}
   </style>
 </head>
 <body>
@@ -97,10 +102,10 @@ header nav > * {
     <h1>Odysseus</h1>
     <h2>{{ page.header }}</h2>
     <nav>
-      <a href="https://github.com/alcinnz/Odysseus/">GitHub</a>
-      <a href='{{ "/" | relative_url }}'>About/Overview</a>
-      <a href='{{ "/blog.html" | relative_url }}'>Blog</a>
-      <a href="https://alcinnz.github.io/Odysseus-support/">Support</a>
+      <a href="https://github.com/alcinnz/Odysseus/"><img src='{{ "/github.png" | relative_url }}' alt="View on GitHub." /></a>
+      <a class="icon-info" href='{{ "/" | relative_url }}'>About/Overview</a>
+      <a class="icon-blog" href='{{ "/blog.html" | relative_url }}'>Blog</a>
+      <a class="icon-help" href="https://alcinnz.github.io/Odysseus-support/">Support</a>
       <strong>Developer Info</strong>
     </nav>
   </header>
