@@ -89,8 +89,14 @@ header nav > * {
     flex-grow: 1;
     text-align: center;
     padding: 4px;
+    position: relative; /* Keep floats within */
 }
-header nav > a:has(img) {
+
+header nav > *:after {
+    float: left; /* Show all the way to left-side of tab */
+}
+
+.host {
     flex-grow: 0;
 }
 
@@ -105,7 +111,7 @@ header nav > a:has(img) {
     <h1>Odysseus</h1>
     <h2>{{ page.header }}</h2>
     <nav>
-      <a href="https://github.com/alcinnz/Odysseus/"><img src='{{ "/github.png" | relative_url }}' alt="View on GitHub." /></a>
+      <a class="host" href="https://github.com/alcinnz/Odysseus/"><img src='{{ "/github.png" | relative_url }}' alt="View on GitHub." /></a>
       <a class="icon-info" href='{{ "/" | relative_url }}'>About/Overview</a>
       <a class="icon-blog" href='{{ "/blog.html" | relative_url }}'>Blog</a>
       <a class="icon-help" href="https://alcinnz.github.io/Odysseus-support/">Support</a>
