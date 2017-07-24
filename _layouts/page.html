@@ -90,6 +90,9 @@ header nav > * {
     text-align: center;
     padding: 4px;
 }
+header nav > a:has(img) {
+    flex-grow: 0;
+}
 
 /* Icons */
 .icon-info:after {content: url({{ "/info.png" | relative_url }});}
