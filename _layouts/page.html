@@ -106,6 +106,12 @@ header nav > *:after {
 .icon-blog:after {content: url({{ "/blog.png" | relative_url }});}
 .icon-help:after {content: url({{ "/help.png" | relative_url }});}
 .icon-developer:after {content: url({{ "/developer.png" | relative_url}});}
+
+/* Layout fix - can't let lines be too long. */
+p {
+    max-width: 1340px;
+    position: relative; /* In case of inner float. */
+}
   </style>
 </head>
 <body>
