@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: First! Odysseus Development Blog
 posttitle: First!
 header: 19th July 2017 — Adrian Cochrane
