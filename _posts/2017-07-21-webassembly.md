@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: WebASM — Odysseus Development Blog
 posttitle: WebAssembly
 header: 21st July 2017 — Adrian Cochrane
