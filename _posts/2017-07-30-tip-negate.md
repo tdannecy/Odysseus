@@ -3,7 +3,7 @@ layout: page
 title: 30 July 2017 Tip from Odysseus Development Blog
 posttitle: Quick Tip
 header: 30 July 2017 Tip — Adrian Cochrane
-date: TODO
+date: 2017-07-30 21:39:01 +12:00
 category: Tip
 ---
 
