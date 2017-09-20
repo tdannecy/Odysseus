@@ -20,7 +20,7 @@ So the real debate at the W3C (from what I read online) was not between people [
 
 And if you need any evidence of the power of symbols you need to look no further than where the value of EME lays. By taking the symbolic action of *attempting* to create [impossible security](https://www.schneier.com/blog/archives/2006/09/microsoft_and_f.html) (and interfacing that through the EME APIs) a company can obtain [unjust](https://www.techdirt.com/blog/?tag=dmca+1201) [freedom-of-speech restricting](http://www.everythingisaremix.info/blog/everything-is-a-remix-fair-use) powers, effectively pretending they succeeded in implementing said security<sup title="This brings us back to the start, EME/DRM is politics rather than a technology.">3</sup>. Ofcourse you can also look at Ghandi or Martin Luther King. 
 
-As for what to do now, we should view this as a success at the W3C. Even if we're viewed as naive about how the W3C works, we have managed to communicate how contraversial DRM is. At the same time it we should probably pressure Mozilla to make their EME implementation look scary and difficult to setup. Then we can wait for the next opportunity to express our displeasure at DRM. 
+As for what to do now, we should view this as a success at the W3C. Even if we're viewed as naive about how the W3C works, we have managed to communicate how contraversial DRM is. At the same time it we should probably pressure Mozilla to make their EME implementation look scary and difficult to setup<sup title="But then the fact they initially pretend not to support it may be enough">4</sup>. Then we can wait for the next opportunity to express our displeasure at DRM. 
 
 ---
 
@@ -33,3 +33,4 @@ It's only necessary to run DRM to access the best advertised media, and that's b
 1. V, like the Founding Fathers of the US, however didn't seem to know that violent actions are more harmful than helpful for a movement.
 2. Though there's certainly some of that with the RIAA/MPAA being W3C members
 3. This brings us back to the start, EME/DRM is politics rather than a technology.
+4. But then the fact they initially pretend not to support it may be enough
