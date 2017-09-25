@@ -13,7 +13,7 @@ As it turns out me and Mike Hearn were coming from very different places, and as
 
 His solution comes focuses on aiding the development of cross-platform apps built on central (Permazon) databases and a choice of languages (possibly via the JVM), and linking between those apps. Also he complains about addressbars in browsers as being a usability issue<sup title="I wouldn't have included it in Odysseus if I thought it was unusable">1</sup>, despite the fact any issues there are really caused by uncaring websites and the fact that Safari shows it can be solved if it is an issue. Heck editing this post on GitHub and in Odysseus I see "https://github.com/alcinnz/Odysseus/new/gh-pages/_posts" there, it's very readable. 
 
-My hypothetical solution<sup title="I've actually been sitting on this for a while, because I'm wierd">2</sup> was all about improving the Web's strengths at sharing information. This involved largely replacing HTTP and substituting the general purpose language JavaScript with a few more domain-specific languages, because we have much better solutions to distributing information now than HTTP<sup title="Solutions with better performance, reliability, privacy, and no 404 errors.">3</sup> and I love the Web's domain specific languages. 
+My hypothetical solution<sup title="I've actually been sitting on this for a while, because I'm wierd">2</sup> was all about improving the Web's strengths at sharing information. This involved largely replacing HTTP and substituting the general purpose language JavaScript with a few more domain-specific languages (a few of which I made sure were still turing complete so as not to be limiting), because we have much better solutions to distributing information now than HTTP<sup title="Solutions with better performance, reliability, privacy, and no 404 errors.">3</sup> and I love the Web's domain specific languages. 
 
 In short his IDE would make his Web approachable to new-coming developers, whereas my IDE would make it approachable to non-developers. 
 
@@ -26,6 +26,8 @@ Outside of Google's offerings The Web leans heavily towards the documents end of
 As such it's appropriate for The Web to focus on how better to aid the distribution of content while pushing app development to the excellent platforms and stores offered by elementary OS, Mac OS X, iOS, Windows, etc. If you're complaining these platforms are not "open", by all means please promote elementary. It's far more open than the thousand-and-one "Recommendations" from the W3C which no new upstart browser can hope to reimplement<sup title="To work around this I'm piggybacking on Apple's efforts">5</sup>.
 
 If you instead want to develop another cross-platform application framework, apparantly you haven't learnt the lessons of history. An app designed for a specific operating will always outcompete you on that platform, and your cross-platform app will die from a thousand cuts. I'm afraid Hearn's solution will die from the same problem. 
+
+Maybe his solution would succeed amongst the developers who's emotional buttons were pressed enough to think The Web succeeded over native. 
 
 ---
 
