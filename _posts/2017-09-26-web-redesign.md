@@ -3,7 +3,7 @@ layout: post
 title: Hypothetical Web Redesign — Odysseus Development Blog
 posttitle: Hypothetical Web Redesign
 header: 25th September 2017 — Adrian Cochrane
-date: ## 2017-09-20 09:08:18 +1200
+date: 2017-09-26 08:54:53 +1300
 categories: misc
 ---
 
@@ -100,12 +100,12 @@ Whether or not a browser actually implements these languages itself, it would be
 ## 3) Publishing Information
 This is an interesting one. Today's Web is almost too good at publishing information, as it happens without the user being necessarily aware that it's happening. So the trick in this redesign is to ensure the user is always aware of where their information is being sent. 
 
-A good way to achieve this would be to throttle all information to be sent to webservices (or elsewhere) through the trusted UI of Web Forms. This wouldn't seriously harm most workflows seen in today's "WebApps" whilst significantly increasing the trust it's reasonable to place in the Web. Also since forms are now trusted UIs, it should be impossible to restyle them<sup title="Which is a good and often ignored usability practice anyways">4</sup> and they should now render with a frame and label describing where the data will be sent. 
+A good way to achieve this would be to throttle all information to be sent to webservices (or elsewhere) through the trusted UI of Web Forms. This wouldn't seriously harm most workflows seen in today's "WebApps" whilst significantly increasing the trust it's reasonable to place in the Web. Also since forms are now trusted UIs, it should be impossible to restyle them<sup title="Which is a good and often ignored usability practice anyways">3</sup> and they should now render with a frame and label describing where the data will be sent. 
 
 ### 3.a) Receiving Information
 With the rest of this rebuilt Web Platform it would be trivial to tell a form to publish it's information and to render that data nicely. Add another DHT that can be used to lookup pages published using a given form and a large fraction of today's forms (including comments, wikis, forums, issue trackers, etc) could be made truly serverless. Allow the form inputs to feed data back into the templates which rendered the pages they're in and many of today's [SaaSS](https://www.gnu.org/philosophy/who-does-that-server-really-serve.html) webservices would both be trivial to code and no longer be SaaSS. This covers the vast majourity of forms on the web today. 
 
-However there'd probably still be circumstances when we'd still need to process the data on a central server<sup title="Afterall there's only so far one can go with a peer-to-peer database.">5</sup>. In those cases we'd need to bring back HTTP (or rather HTTPS). Hopefully this time we could avoid the problems of user agents and fingerprinting. And hopefully if we can stick to that functional templating language for serverside scripting, we can avoid some of the complexity of the cloud. However this post is long enough without considering how the servers would be implemented. 
+However there'd probably still be circumstances when we'd still need to process the data on a central server<sup title="Afterall there's only so far one can go with a peer-to-peer database.">4</sup>. In those cases we'd need to bring back HTTP (or rather HTTPS). Hopefully this time we could avoid the problems of user agents and fingerprinting. And hopefully if we can stick to that functional templating language for serverside scripting, we can avoid some of the complexity of the cloud. However this post is long enough without considering how the servers would be implemented. 
 
 ### 3.b) Authentication & Payments
 These are core components of the modern web experience that were unfortunately left quite tacked-on. That would be remedied in this hypothetical rebuild by defining them as form elements.
@@ -163,3 +163,10 @@ In actual reality what is achievable if we want to improve the Web is to:
 I suspect that the author of the post who inspired me to write this one will propose a universal app platform, but I do not believe that's appropriate in most cases. Different platforms have different conventions and such a universal platform will likely run into the fallacy of "write-once run anywhere" (really it's "write-once optimize everywhere"). 
 
 But that was fun! Wasn't it?
+
+---
+
+1. In large part this section is describing IPFS rather than inventing something new
+2. Given who has what does not necessarily map to who's interested in what.
+3. Which is a good and often ignored usability practice anyways
+4. Afterall there's only so far one can go with a peer-to-peer database.
