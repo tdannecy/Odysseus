@@ -108,8 +108,9 @@ header nav > *:after {
 .icon-developer:after {content: url({{ "/developer.png" | relative_url}});}
 
 /* Layout fix - can't let lines be too long. */
-p {
+p, li, dt, dd {
     max-width: 800px;
+    line-height: 1.5;
     position: relative; /* In case of inner float. */
 }
   </style>
