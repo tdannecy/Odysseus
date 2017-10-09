@@ -84,7 +84,7 @@ I addressed several underlying strengths of The Web in my first post and attempt
   <dt>Crawlers</dt>
   <dd>Just see what comes up on a computer in it's HTXP trading.</dd>
   
-  <dt>Bloggin</dt>
+  <dt>Blogging</dt>
   <dd>Jekyll blogging is supported pretty much out of the box. Jekyll is the technology behind this site. </dd>
 </dl>
 
@@ -110,11 +110,11 @@ While I have no idea of what the process would be for developing a web standard,
 
 However unlike the W3C it'd also be the directors job to lead the development of a self-hosted web browser (which on it's own isn't fully functional) that'll automatically polyfill existing browsers and otherwise ensure the task of implementing a browser engine remains tractible. These development tasks would likely incorporate the maintainance of developer tools, and unit-tests for the standards. 
 
-Also there'd be no server costs for running the wiki, discussion boards, publishing the standards, and any code hosting. This means that the cost to participation can be extremely if not non-existant. 
+Also there'd be no server costs for running the wiki, discussion boards, publishing the standards, and any code hosting. This means that the cost to participation can be extremely low if not non-existant. 
 
 ### How I'd Handle EME
-I've made it clear that I dislike the W3C's action of endorsing the EME standard<sup title="I'm actually still sour from this as not only has a dominant figure declined to help give our movement more sway, but his argument puts me against everyone watching Netflix. That's a difficult battle to win, as in all actuality the Netflix audience have no stake in it.">1</sup>. However given the setup I've described I don't know if I'd do much different as a director of this organization.
+I've made it clear that I dislike the W3C's action of endorsing the EME standard<sup title="I'm actually still sour from this as not only has a dominant figure declined to help give our movement more sway, but his argument puts me against everyone watching NetFlix. That's a difficult battle to win, as in all actuality the NetFlix audience have no stake in it.">1</sup>. However given the setup I've described I don't know if I'd do much different as a director of this hypothetical organization.
 
-Not because DRM might be bit less opprossive if we have browsers fighting it's worst aspects via yet more wasted computation (Tim BL's argument), that's not enough to justify the injustice. I'd do it because in my setup it'd give me a platform to grow the opposition. Once I let the standard through, It'd be my responsibility to create a message saying the feature isn't supported because the free-software constraints on my self-hosted browser wouldn't allow me to actually implement it.
+Not because DRM might be bit less opprossive if we have browsers fighting it's worst aspects via yet more wasted computation (Tim BL's argument), that's not enough to justify the injustice. I'd do it because in my setup it'd give me a platform to grow the opposition. Once I let the standard through, it'd be my responsibility to create a message saying the feature isn't supported. Normally I'd have to provide a fallback implementation, but because the free-software constraints on that work it wouldn't allow me to actually implement it.
 
 And if I'm writing a message or even a video to say EME isn't supported, I might as well explain why this is a *good thing* and tell viewers to complain to the site they're seeing this message on. 
