@@ -83,7 +83,12 @@ I addressed several underlying strengths of The Web in my first post and attempt
   
   <dt>Crawlers</dt>
   <dd>Just see what comes up on a computer in it's HTXP trading.</dd>
-</dd>
+  
+  <dt>Bloggin</dt>
+  <dd>Jekyll blogging is supported pretty much out of the box. Jekyll is the technology behind this site. </dd>
+</dl>
+
+Ofcourse it's also fascinating that it doesn't cost anything to run a wiki, forum, or most websites. 
 
 ## Ideal Underlying Internet
 If the Internet needed to be rebuilt along with the Web, what Internet would best underly NewWeb.
