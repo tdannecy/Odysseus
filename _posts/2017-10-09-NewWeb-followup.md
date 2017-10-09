@@ -3,7 +3,7 @@ layout: post
 title: "Followup: Hypothetical Web Redesign — Odysseus Development Blog"
 posttitle: "Followup: Hypothetical Web Redesign"
 header: 9th October 2017 — Adrian Cochrane
-date:
+date: 2017-10-09 17:10:51 +1300
 categories: misc
 ---
 
@@ -79,5 +79,30 @@ I addressed several underlying strengths of The Web in my first post and attempt
   <dd>The parsing and templating capability would be very capable of syntax highlighting for a nicer UI, especially when they're used to add a domain-specific syntax upon themselves for this very purpose. Also the natural NewWeb browser optimization of lazy functional programming would implement the performance characteristics for us.</dd>
   
   <dt>Infinite Scrolling</dt>
-  <dd>Comes naturally to all pages when browsers implement "lazy functional programming" optimizations.</dd>
+  <dd>Comes naturally to all pages when browsers implement "lazy functional programming" optimizations for the templating. They'd just stop rendering the template as it flows offscreen.</dd>
+  
+  <dt>Crawlers</dt>
+  <dd>Just see what comes up on a computer in it's HTXP trading.</dd>
 </dd>
+
+## Ideal Underlying Internet
+If the Internet needed to be rebuilt along with the Web, what Internet would best underly NewWeb.
+
+It's main requirement is for there to be a protocol for syncing senstive files like the private key for a user account, as any other user experience around the cryptographic online accounts would be terrible. This in turn requires multicasting to all other hosts under a domain (henceforth "nick"), and unicast to specific hosts to request changed files. Ideally this file syncing protocol and the multicasting protocol would allow for relays to buffer messages and changed files until a nick comes back online without knowing what content is being shared, just to take reliability concerns out of peer-to-peer systems. 
+
+The multicasting protocol would relay messages along minimum spanning tree and find the appropriate minimum spanning tree to join via DHT routing. Each link in the MST would send back an ack for partial reliability. Additionally for submitting forms to a nick, I'd use this same infrastructure to create a weighted random reliable and encrypted any-cast. This scheme is quite similar to Tox, and has the nice sideeffect of being an excellent platform for implementing one-on-one communication protocols (e.g. video calls, SMS, eMail) and the "continuity" user experience Apple's chasing. Allow multicast groups to be combined in a DAG and we can extend the one-on-one communication protocols to groups. 
+
+Beneath this we need unicast routing. While IP could be used here, I'd probably opt for mesh routing. This would involve having each host track routes to their physically (by hops) and logically (by XOR distance) closest neighbours, and use it to route each other's messages. If they don't have a route to a destination, the host would wrap the packet up in a new one and send it on to the logically closest host it knows of. 
+
+However to make that mesh routing efficient we need a large number of physically close neighbours. To address that I'd add a path-based routing protocol, implemented efficiently using the rotated bitshift operation. And beneath that I'd have a range of physical connection protocols like Ethernet, WiFi, and satellite. This resembles Hyperborea quite closely and has the nice benefits that it significantly reduces the need for ISPs and wifi hotspots, as well as the fact it's DHT routing could be encrypted to natively support Tor-like privacy. 
+
+## Governance
+Any Internet and Web would require a standards organization to maintain it's interoperability. Ours is no different. 
+
+My main concerns for this hypothetical standards organization is for 1) the task of developing a web browser engine to always be tractable (it isn't for today's web) and 2) for it to have low-cost of entry (I view that as a fundamental drawback to the design of the W3C, as it skews who gets to have a say). Thankfully this NewWeb has characteristics to help address these shortcomings. 
+
+While I have no idea of what the process would be for developing a web standard, I would have much the work done over a wiki potentially with occasional in-person meetings much like the IETF and W3C's moving to. And like the W3C there'd be a director responsible for signing off on standards before they're considered "recommendations". 
+
+However unlike the W3C it'd also be the directors job to lead the development of a self-hosted web browser (which on it's own isn't fully functional) that'll automatically polyfill existing browsers and otherwise ensure the task of implementing a browser engine remains tractible. These development tasks would likely incorporate the maintainance of developer tools, and unit-tests for the standards. 
+
+Also there'd be no server costs for running the wiki, discussion boards, publishing the standards, and any code hosting. This means that the cost to participation can be extremely if not non-existant. 
