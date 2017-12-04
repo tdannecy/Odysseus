@@ -34,6 +34,6 @@ It just helps if I can keep these concepts seperate.
 ---
 
 1. While that's not exactly the wording of the guideline, it is how it applies to Odysseus. 
-2. [Minhash](http://matthewcasperson.blogspot.co.nz/2013/11/minhash-for-dummies.html) combined with an [anonymising pub-sub network](https://ipfs.io/blog/25-pubsub/) looks interesting to try out for this purpose.
+2. [Minhash](https://robertheaton.com/2014/05/02/jaccard-similarity-and-minhash-for-winners/) combined with an [anonymising pub-sub network](https://ipfs.io/blog/25-pubsub/) looks interesting to try out for this purpose.
 3. Work designing pages to hold categories of links. 
 4. I'm good at interactive design, but I'm slow at visual design.
