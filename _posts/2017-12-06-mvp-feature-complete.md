@@ -3,7 +3,7 @@ layout: post
 title: 6th December 2017 — Odysseus Development Blog
 posttitle: MVP - Is Feature Complete
 header: 4th December 2017 — Adrian Cochrane
-date: -- 2017-12-04 16:24:43 1300
+date: 2017-12-06 17:55:04 1300
 categories: dev
 ---
 
