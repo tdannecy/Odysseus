@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 7th December 2017 — Odysseus Development Blog
-posttitle: Release Cleanup: Day 1
+posttitle: "Release Cleanup: Day 1"
 header: 7th December 2017 — Adrian Cochrane
 date: 2017-12-07 19:19:54 1300
 categories: cleanup1.0
