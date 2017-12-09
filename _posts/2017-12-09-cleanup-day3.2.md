@@ -13,3 +13,5 @@ I'm not particularly happy about having my own user agent, as it increases the b
 
 ## What Are Traits
 Traits, in the Odysseus codebase are loosely coupled pieces of code which adds new behaviours to WebViews. They basically ammount to hardcoded browser plugins, except they can't be enabled or disabled. 
+
+These traits have long been an invaluable measure for simplifying my code, as well as for continuing efforts in that regard. Each trait's code can be considered on it's own seperate from WebKit and Odysseus, as they mostly just rely on WebKit and some underlying "Services". This in turn allows WebKit's codebase to be more general and for the rest of Odysseus's codebase to be quite bare bones.
