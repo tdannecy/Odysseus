@@ -20,7 +20,7 @@ So while it took quite a bit of effort to perform this refactoring, it is well w
 
 ---
 
-### Concerns Now Removed From `BrowserWindow`
+## Concerns Now Removed From `BrowserWindow`
 
 * Persistance
 * Tracking state of window-visible webview
