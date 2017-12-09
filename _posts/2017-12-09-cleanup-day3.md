@@ -17,3 +17,11 @@ The increased code clarity isn't the only thing that came out of this effort, it
 The open and save actions further benefitted from abstracting the `FileChooserDialog` behind a new method, something akin to JavaScript's `alert`/`prompt`/`confirm` APIs. Once I combined that wrapper method with a `foreach` loop, I found I could make cancel handling implicit in the code while being fully functional. 
 
 So while it took quite a bit of effort to perform this refactoring, it is well worth it both for developers and users of Odysseus. And certainly a lot nicer for me as a member of both groups. 
+
+---
+
+### Concerns Now Removed From `BrowserWindow`
+
+* Persistance
+* Tracking state of window-visible webview
+* Direct construction of toolbar buttons & their menus. 
