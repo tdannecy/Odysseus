@@ -5,6 +5,7 @@ posttitle: New Recommendations Site
 header: 4th December 2017 — Adrian Cochrane
 date: 2017-12-04 16:24:43 1300
 categories: webdev
+slug: recommendations
 ---
 
 I've just put some time consuming effort into the first-launch experience of Odysseus, and unlike most other browsers it's not a tour of Odysseus's features. Instead [inline with the HIG](https://elementary.io/docs/human-interface-guidelines#first-launch-experience) it's a [well-presented bunch of links](https://alcinnz.github.io/Odysseus-recommendations/)<sup title="While that's not exactly the wording of the guideline, it is how it applies to Odysseus">1</sup>. 
