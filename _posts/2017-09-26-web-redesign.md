@@ -5,7 +5,6 @@ posttitle: Hypothetical Web Redesign
 header: 25th September 2017 — Adrian Cochrane
 date: 2017-09-26 08:54:53 +1300
 categories: misc
-slug: web-redesign
 ---
 
 **NOTE** This long post is purely for very geeky entertainment. Feel free to skip it.
