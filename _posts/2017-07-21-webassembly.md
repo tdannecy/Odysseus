@@ -5,6 +5,7 @@ posttitle: WebAssembly
 header: 21st July 2017 — Adrian Cochrane
 date: 2017-07-21 11:46:38 1200
 categories: standards
+slug: WebAssembly
 ---
 
 Another recent standard that deserves consideration is [WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly), as it provides web developers a closer-to-the-metal language with which they can better obfuscate their code. 
