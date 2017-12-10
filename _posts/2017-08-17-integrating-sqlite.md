@@ -74,7 +74,3 @@ This was implemented in Odysseus by storing the schema version near the start of
 using [`PRAGMA user_version;`](https://sqlite.org/pragma.html#pragma_user_version). Then
 that's fed as input into a Prosody template, who's output is streamed into SQLite. This all
 happens first thing as Odysseus starts. 
-
-# Comments
-
-Feel free to [edit this file](https://github.com/alcinnz/Odysseus/edit/gh-pages/_posts/2017-08-16-integrating-sqlite.md) to add comments below. 
