@@ -5,6 +5,7 @@ posttitle: MVP - Is Feature Complete
 header: 6th December 2017 — Adrian Cochrane
 date: 2017-12-06 17:55:04 1300
 categories: dev
+slug: mvp-feature-complete
 ---
 
 Today I got dragging a tab [out into it's own window](http://www.google.com/googlebooks/chrome/small_18.html) working, which is part of the [behaviour](https://github.com/elementary/granite/blob/master/lib/Widgets/DynamicNotebook.vala) of a [standard elementary tabbar](https://valadoc.org/granite/Granite.Widgets.DynamicNotebook.html). This required [messing with the task scheduling](https://valadoc.org/glib-2.0/GLib.Idle.add.html) a little for it to work<sup title="I don't fully understand why">1</sup>, but the [Scratch](https://github.com/elementary/scratch/blob/master/src/Widgets/DocumentView.vala#L246) text editor served very well as [sample code](https://elementary.io/open-source) to get any issues resolved. What I didn't manage to get working is [restoring tab history](https://alcinnz.github.io/Odysseus-support/guides/why-do-tabs-lose-history.html), but that'll have to wait until a particular [WebKitGTK update](https://bugs.webkit.org/show_bug.cgi?id=26517) which I won't let hold up Odysseus's release any longer. 
