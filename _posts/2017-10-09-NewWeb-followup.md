@@ -5,6 +5,7 @@ posttitle: "Followup: Hypothetical Web Redesign"
 header: 9th October 2017 — Adrian Cochrane
 date: 2017-10-09 17:10:51 +1300
 categories: misc
+slug: NewWeb-followup
 ---
 
 **NOTE** This is the final pure geeky entertainment post in this series about an alternative Web. The next post should be back to documenting Odysseus development. If you haven't already, I recommend you read [the first post in this series](https://alcinnz.github.io/Odysseus/misc/2017/09/26/web-redesign.html) first. 
