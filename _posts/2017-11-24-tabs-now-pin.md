@@ -5,7 +5,6 @@ posttitle: Tabs Now Pin
 header: 24th November 2017 — Adrian Cochrane
 date: 2017-10-24 19:07:25 +1300
 categories: dev
-slug: tabs-now-pin
 ---
 
 I know it's been a while since the last post, but now I'm nearing the homestretch to when I'll feel comfortable publishing this to the elementary AppCenter. I'm really looking forward to it.
