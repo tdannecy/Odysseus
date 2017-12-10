@@ -5,7 +5,6 @@ posttitle: Integrating SQLite
 header: 17th June 2017 — Adrian Cochrane
 date: 2017-08-17 08:52 +1200
 category: development
-slug: integrating-SQLite
 ---
 
 I like [HTML](https://www.w3.org/html/) and [CSS](https://www.w3.org/Style/CSS/).
