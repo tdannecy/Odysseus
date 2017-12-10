@@ -9,6 +9,7 @@
 body {
     font: 14px sans-serif; /* Native sans-serif */
     color: #333;
+    margin: 0; padding: 0;
 }
 
 body.branded {
@@ -16,18 +17,7 @@ body.branded {
     background-position: 0 80%;
 }
 
-main {
-    max-width: 600px; /* almost 3 uppercase alphabets worth */
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 90vh
-}
-
-main h1, main h2, main h3, main h4 {
-    text-align: center;
-}
+main {padding: 20px;}
 
 /* These heading sizes are taken from the elementary Gtk theme
     https://github.com/elementary/stylesheet/blob/master/gtk-3.0/granite-widgets.css#L378 .
@@ -61,8 +51,8 @@ h4 {
     
 header {
     background: linear-gradient(#efefef, #bebebe);
-    margin: -10px;
-    padding: 0 10px;
+    margin: 0;
+    padding: 0;
 }
 
 header + * {
@@ -70,6 +60,7 @@ header + * {
 }
 
 header > div {
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -81,7 +72,7 @@ header h2 {
 
 header nav {
     display: flex;
-    margin: -10px;
+    margin: 0;
 }
 
 header nav > * {
