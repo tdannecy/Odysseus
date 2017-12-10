@@ -5,7 +5,6 @@ posttitle: "Re: What Should Follow the Web"
 header: 26th September 2017 — Adrian Cochrane
 date: 2017-09-26 10:56:16 +1300
 categories: misc
-slug: WSFtW-reply
 ---
 
 **NOTE** This is a continuation of the [previous pure geeky entertainment post](https://alcinnz.github.io/Odysseus/misc/2017/09/26/web-redesign.html), and a reply to the continuation of the post which inspired that.
