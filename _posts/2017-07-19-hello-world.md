@@ -5,7 +5,6 @@ posttitle: First!
 header: 19th July 2017 — Adrian Cochrane
 date: 2017-07-19 21:31:53 +1200
 categories: meta
-slug: First
 ---
 
 I wanted a place to comment on the development of the Odysseus web browser, and any web standards of particular note. For that reason I started this blog. 
