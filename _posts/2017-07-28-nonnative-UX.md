@@ -5,7 +5,6 @@ posttitle: On Non-native UX
 header: 28th July 2017 — Adrian Cochrane
 date: 2017-07-28 16:50:54 +12:00
 category: UX
-slug: nonnative-UX
 ---
 
 As you may well know, Odysseus aims to feel native to [elementary OS](https://elementary.io/). However sticking too rigidly to the familiar and native controls may actually hurt the user experience. This might be when the Web UX Odysseus exposes handles page navigation better then those native controls, or it might be when a native control seems to be designed for the purpose you have but really handles a different one. The latter can be especially tricky when that native control has some atypical behaviour that's tricky to reimplement.
