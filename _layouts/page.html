@@ -69,7 +69,7 @@ header + * {
     margin-top: 40px;
 }
 
-header section {
+header > div {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -126,10 +126,10 @@ p, li, dt, dd {
 </head>
 <body>
   <header>
-    <section>
+    <div>
       <h1><img src="/Odysseus/odysseus-web.svg" />Odysseus</h1>
       <h2>{{ page.header }}</h2>
-    </section>
+    </div>
     <nav>
       <a class="host" href="https://github.com/alcinnz/Odysseus/"><img src='{{ "/github.png" | relative_url }}' alt="View on GitHub." /></a>
       <a class="icon-info" href='{{ "/" | relative_url }}'>About/Overview</a>
