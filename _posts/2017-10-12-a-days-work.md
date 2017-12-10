@@ -5,6 +5,7 @@ posttitle: A Day's Work
 header: 12th October 2017 — Adrian Cochrane
 date: 2017-10-12 19:07:25 +1300
 categories: dev
+slug: 2017-10-12
 ---
 It took me too long to get back to Odysseus development, but today I got a lot done on it. I've fixed some issues I've been having
 with SQLite3, fixed some newcoming bugs, figured out where I currently stand in regards to EME, and made some fixes to my icon to
