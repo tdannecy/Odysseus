@@ -5,7 +5,6 @@ posttitle: Quick Tip
 header: 30 July 2017 Tip — Adrian Cochrane
 date: 2017-07-30 21:39:01 +12:00
 category: Tip
-slug: tip-negate
 ---
 
 If your software is behaving strangely, consider your conditions. You may need to negate them.
