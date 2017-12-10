@@ -5,7 +5,6 @@ posttitle: EME now a W3C Recommendation
 header: 19th September 2017 — Adrian Cochrane
 date: 2017-09-20 09:08:18 +1200
 categories: standards
-slug: EME-ratified
 ---
 
 The W3C has just [announced](https://www.w3.org/2017/09/pressrelease-eme-recommendation.html.en) that the appeals process has failed and [EME](/Odysseus/standards/2017/07/20/eme.html) is now a W3C recommendation without any [covenant](https://www.eff.org/pages/objection-rechartering-w3c-eme-group) against anti-circumvention laws. Needless to say I am deeply dissapointed by this. 
