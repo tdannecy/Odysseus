@@ -15,9 +15,15 @@ The thing with sizing the addressbar is that left to it's own devices a text ent
 
 As for the fact you couldn't click an autocompletion to navigate to it's page, that was a surprisingly quick fix. I previously called two methods in the wrong order, causing an event handler to be added to the completions list before it existed. That's no longer an issue.
 
-## What's next?
-I have the overlays over the webpage next on my list to clean. Looking forward to what needs doing on that, there appears to be one or two little things but mostly I'd be wanting to make sure I can use a "shades" overlay to prevent clicking a webpage while it's got some sort of dialog open. 
+---
+
+After that I attempted to upgrade the ButtonWithMenu code I'm using to be inline with [Pantheon Files](https://github.com/elementary/files)<sup title="Turns out there weren't any changes to this file to be commited.">2</sup> and tidied up the widgets which overlay ontop of webpages. While there were one or two codestyle issues to fix, most the problems were bigger than that but yet had trivial solutions. 
+
+The `FindToolbar` had two issues: a bit of menu positioning logic was extra clutter and it was using deprecated APIs to turn the text red when some text can't be found on the page. The former was fixed by utilizing the `ButtonWithMenu` class I was using elsewhere. And the latter was fixed by switching to a newer API which is more concise and semantic, basically it involves applying a `.error` class to the entry just as one would on the Web. 
+
+The other issue with that code was that it had a previous attempt at making JavaScript popups more modal, one which didn't work and wasn't hooked up to anything. That attempt involved overlaying a widget to block all interactions with the webpage while it was open. Turns out that wasn't necessary as I can instead have the relevant trait configure the webview not to respond to any events (to be `insensitive`) while it's `InfoBar` is open. On it's own that doesn't communicate that the page is inactive, but that can be solved simply by utilizing the statusbar text. 
 
 ---
 
 1. Or at least that's the behaviour I found while implementing the addressbar. Things might have changed now.
+2. Turns out there weren't any changes to this file to be commited.
