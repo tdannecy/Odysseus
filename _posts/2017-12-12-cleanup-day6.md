@@ -15,7 +15,7 @@ To lay this ideal out:
 * *Services* are depended upon by *traits* and are triggered either by the *UI* layer or through the initialization of *traits*. They may bring in their own 3rd party dependancies. 
 * *Traits* depend on **WebKit**, *services*, and possibly the **WebTab** widget. Beyond some initialization code (which gets bundled up with the initializers of all other *traits* and some *services*), they are triggered exclusively by **WebKit** or the *services*. 
 * The *UI* builds upon **GTK**+**Granite** to wrap **WebKit**. It shouldn't depend on any *traits* other than to initialize all *traits*, though it may build upon certain *services* and the *models*. 
-* *Page templates* are enabled by a particular *service*, and are provided to be integrated into the *UI* and/or *traits*. 
+* *Internal pages* are enabled by a particular *service*, and are provided to be integrated into the *UI* and/or *traits*. 
 
 This ideal doesn't quite apply, and I don't plan for it too, but it's extremely close to the reality.
 
