@@ -12,7 +12,7 @@ Surf the Web with the controls you're already familiar with from apps like Files
 
 ## Features
 
-* Can present any webpage Apple's Safari or GNOME's Epiphany browsers can handle
+* Can present any webpage Apple's Safari or GNOME's Epiphany can handle
 * Full elementary-style tabbar complete with pinning, duplicating, restoring, moving tabs, and more.
 * Quickly jump to any page in your tab history
 * Videos, PDFs, and more open with their respective apps
