@@ -4,7 +4,7 @@ title: Odysseus - The Web Browser for elementary OS
 header: About/Overview
 ---
 
-# elementary OS's own web browser
+# elementary OS's very own web browser
 
 <img src="screenshot.png" alt='Toolbar: [Close] [Back] [Forward] [Reload/Stop] ["Address bar"] [Menu] [Maximize], Tabbar, Webpage' />
 
