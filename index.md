@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Odysseus - The Web Browser for elementary OS
+title: Odysseus - elementary OS's very own web browser
 header: About/Overview
 ---
 
