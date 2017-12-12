@@ -16,7 +16,7 @@ Surf the Web with the controls you're already familiar with from apps like Files
 * Full elementary-style tabbar complete with pinning, duplicating, restoring, moving tabs, and more.
 * Quickly jump to any page in your tab history
 * Videos, PDFs, and more open with their respective apps
-* Keeps your downloads folder sorted by date
+* Keeps your downloads folder organized by date
 * Quickly and flexibly find text in web pages
 * DuckDuckGo integration with search autocompletion
 * Takes security seriously by defaulting to HTTPS and not uploading the web addresses you type anywhere. 
