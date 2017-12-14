@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 15th December 2017 — Odysseus Development Blog
-posttitle: "Repost: Worrying About Bitcoins Energy Consumption? Worry About Server Farms"
+posttitle: "Repost: Bitcoin+Server Farm Energy Concerns"
 header: 15th December 2017 — Adrian Cochrane
 date: 2017-12-15 08:10:14 1300
 categories: repost
