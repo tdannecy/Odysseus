@@ -5,7 +5,7 @@ posttitle: "Repost: Bitcoin+Server Farm Energy Concerns"
 header: 15th December 2017 — Adrian Cochrane
 date: 2017-12-15 08:10:14 1300
 categories: repost
-excerpt: '"If You Are Going To Worry About Bitcoin's Energy Consumption, Worry About Server Farms Too -- For More Than One Reason" Techdirt.com'
+excerpt: If You Are Going To Worry About Bitcoin's Energy Consumption, Worry About Server Farms Too -- For More Than One Reason @ Techdirt.com
 ---
 
 # [If You Are Going To Worry About Bitcoin's Energy Consumption, Worry About Server Farms Too -- For More Than One Reason](https://www.techdirt.com/articles/20171213/03424038794/if-you-are-going-to-worry-about-bitcoins-energy-consumption-worry-about-server-farms-too-more-than-one-reason.shtml)
