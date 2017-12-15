@@ -18,5 +18,7 @@ Please help make Odysseus the best browser for those brave enough to try it! Pro
   <dd>Do you enjoy making <a href="https://github.com/sindresorhus/awesome">Awesome Lists</a>? Or do you have an awesome bookmarks collection? Then Odysseus could *really* use you.</dd>
   <dd>If that's you show us your skill by sorting through our <a href="https://github.com/alcinnz/Odysseus-recommendations/">recommended links</a>. Add to it, remove links cluttering it up, and discuss other's suggestions. Then if you become invaluable doing that, you may be relied upon to help the transition to a new presentation of these links.</dd>
   <dt>Coders</dt>
-  <dd><a href="https://github.com/alcinnz/Odysseus/">Odysseus</a> is free and open source software on GitHub, and welcomes your contributions.</dd>
+  <dd><a href="https://github.com/alcinnz/Odysseus/">Odysseus</a> is free and open source software on GitHub, and welcomes your contributions!</dd>
 </dl>
+
+If you do a great job at any of these tasks, you may be asked to write a blog post for Odysseus. 
