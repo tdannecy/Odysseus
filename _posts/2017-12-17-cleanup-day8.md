@@ -17,6 +17,8 @@ Finally for memory and CPU performance a cache is maintained to aid reusing tran
 
 All these performance measures basically brings us back to the same performance characteristics I've explicitly given Prosody. It isn't microoptimized to perform well on the CPU, but it is well optimized not to use extraneous memory. 
 
+I look forward to seeing these tools be used to help Odysseus reach a greater audience!
+
 ---
 
 Alongside this I had to rewrite the template messages extractor to use the new syntax. There I ended up removing the generation of contextual data and the logic for merging in the new messages, basically because I decided while these features are useful it's not what I want to spend my time implementing. They are not vital.
