@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: Meson and Dock Progress — Odysseus Development Blog
 posttitle: Meson and Dock Progress
 header: 18th December 2017 — Adrian Cochrane
