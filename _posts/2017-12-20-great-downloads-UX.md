@@ -14,3 +14,7 @@ When you download a file it'll display the downloads bar whilst showing a combin
 Additionally you can close the downloads bar on any window at any time, and when it reopens no completed downloads will clutter it up. It'll reopen either when a new download starts or when you explicitly tell it to via the app menu.
 
 Implementation-wise while much of this was simply bugfixing, there were definitely new features added. Heck for bugfixing, I fixed a problem where Odysseus wasn't being smart enough when the server told it "[you figure out this filetype](https://kb.iu.edu/d/agtj)." However for the new features (dock-item progress, notifications, and the additional doorstop against accidentally cancelling downloads via closing Odysseus), those were implemented in a couple of new self-contained "traits". 
+
+---
+
+P.S. For testing, I downloaded the excellent [Caminandes](http://www.caminandes.com/) shorts. These are what you see in the promotional screenshots of "Videos".
