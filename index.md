@@ -20,4 +20,6 @@ Surf the Web with the controls you're already familiar with from apps like Files
 * Quickly and flexibly find text in web pages
 * DuckDuckGo integration with search autocompletion
 * Takes security seriously by defaulting to HTTPS and not uploading the web addresses you type anywhere. 
+* Shows combined download progress in the dock for a quick glance.
+* Quick to start as it holds off on loading pages from your previous browsing session.
 * And more to come…
