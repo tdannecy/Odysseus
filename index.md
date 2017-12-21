@@ -15,7 +15,7 @@ Surf the Web with the controls you're already familiar with from apps like Files
 * Can present any webpage Apple's Safari or GNOME's Epiphany can handle
 * Full elementary-style tabbar complete with pinning, duplicating, restoring, moving tabs, and more.
 * Quickly jump to any page in your tab history
-* Videos, PDFs, and more open with their respective apps
+* Videos, PDFs, and more open and stream into their respective apps
 * Keeps your downloads folder organized by date
 * Quickly and flexibly find text in web pages
 * DuckDuckGo integration with search autocompletion
