@@ -22,7 +22,7 @@ So I'm presenting my collection as categorized favicons in order to get the crow
 
 #### Help Wanted
 
-In order to achieve that vision, I need help from a casual or professional Librarian and a Visual Designer<sup title="I'm good at interactive design, but I'm slow at visual design.">4</sup>. So if you want to fill either or both of these roles, please [discuss it with me](https://github.com/alcinnz/Odysseus-support/wiki/help-wanted/edit). Thanks. 
+In order to achieve that vision, I need help from a casual or professional Librarian and a Visual Designer<sup title="I'm good at interactive design, but I'm slow at visual design.">4</sup>. So if you want to fill either or both of these roles, please [discuss it with me](https://github.com/alcinnz/Odysseus-support/wiki/help-wanted/_edit). Thanks. 
 
 ### Glossary
 For my own sake of mind, I've been differentiating between the terms recommendation and suggestion. 
