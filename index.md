@@ -6,7 +6,7 @@ header: About/Overview
 
 # elementary OS's very own web browser
 
-<img src="screenshot.png" alt='Toolbar: [Close] [Back] [Forward] [Reload/Stop] ["Address bar"] [Menu] [Maximize], Tabbar, Webpage' />
+<img src="screenshot.png" alt='Screenshot of Odysseus showcasing the "headerbar", tabbar, find-in-page, and downloads features.' />
 
 Surf the Web with the controls you're already familiar with from apps like Files and Scratch. With everything where you already expect them it is seamless to switch between Odysseus and other apps. 
 
