@@ -50,3 +50,5 @@ Currently I plan to support to support the following types of extensions:
 * Vocabularies -- used with bookmarks to encourage more consistancy between websites and surfers. Uses SKOS and would particularly helpful for sharing bookmarks. 
 * Share links -- added to a menu accessible through right-click on favourites.
 * Content blockers, userscripts, userstyles -- types of extensions built-in to WebKit that'll be exposed through Odysseus. 
+
+Notably, (almost) all of these extensions correspond to existing standards with the exception being content blockers. But that's an existing format from Apple that's already in use. Furthermore, for simplicity, these would be installed during the course of normal browsing through icons in the addressbar. Upon install, a toast overlay would confirm successfully install and, to support AppCenter-style pay-what-you-want/koha payment models, include a button linking to a donation page if it can find one. To do so it would like for a link with a rel=payment, which in turn is another existing "microdata" standard. 
