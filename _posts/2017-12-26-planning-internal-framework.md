@@ -4,7 +4,7 @@ title: Internal Framework Plans — Odysseus Development Blog
 posttitle: Planning internal Trait Framework
 header: 26th December 2017 — Adrian Cochrane
 date: 2017-12-26 16:52:38 1300
-categories: features
+categories: dev
 ---
 
 While I wait for Odysseus to be accepted into the AppCenter (which is probably understandably slow during the Holiday season), I thought it might be nice to lay out a short-term roadmap for an internal framework to develop longer-term (though very important) browser features on. 
