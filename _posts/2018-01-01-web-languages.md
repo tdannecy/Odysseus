@@ -3,7 +3,7 @@ layout: post
 title: Web Languages — Odysseus Development Blog
 posttitle: Language Roundown for Internal Pages
 header: 1st January 2018 — Adrian Cochrane
-date: --2017-12-31 16:00:42 1300
+date: 2018-01-01 18:05:39 1300
 categories: dev
 ---
 
@@ -166,5 +166,6 @@ Not worth describing here.
 
 Sure, it's true that I'm now using a large number of languages to implement the internal pages for Odysseus. But each of these languages addresses their problemspace very well, with specifically targetted syntax and internal optimizations. 
 
-What this all means is that rather than the code for those pages prescribing the steps to take to display that data, I'll be able to simply say what data I want displayed, how it is structured, and how it should be displayed. tfggcfffffff8[,,,,,p6o=-
-1A[]2
+What this all means is that rather than the code for those pages prescribing the steps to take to display that data, I'll be able to simply say what data I want displayed, how it is structured, and how it should be displayed. 
+
+This should in turn should both make it a lot easier to develop these pages, and since HTML, CSS, and JavaScript *are* what makes up webpages using them should make these pages feel like part of the Web. And if they feel like part of the web rather than part of Odysseus, maybe Odysseus will appear just a little bit simpler. 
