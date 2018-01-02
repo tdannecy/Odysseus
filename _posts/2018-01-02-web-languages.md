@@ -124,7 +124,7 @@ Later it's combined with CSS to construct a "Style Tree".
 
 ### JavaScript (implemented in WebKit JavaScriptCore)
 
-**Strengths:** It was quick for Brendan Eich to hack together. It is a "general purpose language" that doesn't have the same sort of strengths SQL, Prosody, HTML, and CSS do as DSLs. 
+**Strengths:** It was quick for Brendan Eich to hack together. It is a "general purpose language" that doesn't have the same sort of strengths SQL, Prosody, HTML, and CSS do as [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language). 
 
 **Data Model:** "Objects" (maps) with [prototypal inheritance](https://en.wikipedia.org/wiki/Prototype-based_programming), numbers, text, booleans, & arrays. Internally "[structures](https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html)" are used to consolidate prototypes and property names between multiple similarly structured objects, as that significantly reduces relatively slow (but still fast) operations in the datamodel. 
 
