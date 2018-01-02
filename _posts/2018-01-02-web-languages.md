@@ -3,7 +3,7 @@ layout: post
 title: Web Languages — Odysseus Development Blog
 posttitle: Language Roundown for Internal Pages
 header: 1st January 2018 — Adrian Cochrane
-date: 2018-01-01 18:05:39 1300
+date: 2018-01-02 15:51:25 1300
 categories: dev
 ---
 
@@ -66,9 +66,9 @@ Having done this, I have successfully pulled together the full suite of language
 
 **Turing complete:** With CSS, not really. 
 
-**Parsing:** TODO document. Involves dynamically dispatching AST construction to classes for the different elements.
+**Parsing:** Consists of a lexer and various components (including dynamic dispatch into initial interpretor) together comprising the parser, all of which is implemented in raw C++.
 
-**How is it run:** Initially interpreted via dynamic dispatch during parsing to register event handlers, request any necessary resources, and possibly construct a "shadow DOM". Slow, but on a slow path. 
+**How is it run:** Initially interpreted via dynamic dispatch during parsing to register event handlers, request any necessary resources, alter the containing frame/window, or possibly construct a "shadow DOM". Slow, but on a slow path. 
 
 Later it's combined with CSS to construct a "Style Tree".
 
@@ -80,17 +80,17 @@ Later it's combined with CSS to construct a "Style Tree".
 
 **Paradigm:** I fail to classify it, but consists of what CSS calls "selection" and "cascade".
 
-**Parsing:** TODO: document.
+**Parsing:** A nontrivial parser/lexer, with parsers for the different CSS properties and support routines for those.
 
-**How are selectors run:**
+**How are selectors [run](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/):**
 
 1. Which elements have been changed and require restyling is checked. 
 2. Previous HTML siblings are checked to see if their results can be reused. 
 3. The tagname, ID, class, or psuedoclass is looked-up in a hashmap to constrain selectors that need to be checked.
-4. A bloom-filter is used to probabilistically (with no false negatives) discard selectors. 
-5. The remaining selectors are quickly compiled to machine code for high-throughput tests. 
+4. A [bloom-filter](https://www.jasondavies.com/bloomfilter/) is used to probabilistically (with no false negatives) discard selectors. 
+5. The remaining selectors are [quickly compiled to machine code](https://webkit.org/blog/3271/webkit-css-selector-jit-compiler/) for high-throughput tests. 
 
-**How is cascade run:** The properties prescribed by rules outputted by the selector interpretor are first consolidated into something between an array and C structure; before that's compiled down into a Style Tree whilst applying CSS inheritance and animations. The latter step is performed by a JSON file compiled down into C++ via Perl. 
+**How is cascade run:** The properties prescribed by rules outputted by the selector interpretor are first consolidated into something between an array and C structure; before that's compiled down into a Style Tree whilst applying CSS variables, inheritance, and animations. The latter step is performed by a JSON file compiled down into C++ via Perl. 
 
 #### The Style Tree
 
@@ -102,7 +102,7 @@ Later it's combined with CSS to construct a "Style Tree".
 
 **How is it run:** A simple pass generates the right type of Render Tree node, which'll then refer to the style tree for details.
 
-#### The Render Tree
+#### The [Render Tree](https://webkit.org/blog/114/webcore-rendering-i-the-basics/)
 
 **Strengths:** Layout, basic rendering.
 
@@ -122,24 +122,24 @@ Later it's combined with CSS to construct a "Style Tree".
 
 **How is it run:** Takes the images outputted from the Render Tree and blits them together in the GPU (or, I suppose in some cases, the CPU) either by itself (when using X11) or in the window manager (on Wayland or Mac OS X). 
 
-### JavaScript
+### JavaScript (implemented in WebKit JavaScriptCore)
 
 **Strengths:** It was quick for Brendan Eich to hack together. It is a "general purpose language" that doesn't have the same sort of strengths SQL, Prosody, HTML, and CSS do as DSLs. 
 
-**Data Model:** "Objects" (maps) with prototypal inheritance, numbers, text, booleans, & arrays. Internally "structures" are used to consolidate prototypes and property names between multiple similarly structured objects, as that significantly reduces relatively slow (but still fast) operations in the datamodel. 
+**Data Model:** "Objects" (maps) with [prototypal inheritance](https://en.wikipedia.org/wiki/Prototype-based_programming), numbers, text, booleans, & arrays. Internally "[structures](https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html)" are used to consolidate prototypes and property names between multiple similarly structured objects, as that significantly reduces relatively slow (but still fast) operations in the datamodel. 
 
-**Paradigm:** Procedural with structured control flow and significant use of callbacks. 
+**Paradigm:** Procedural with structured control flow and ubiquitous use of callbacks. 
 
-**Parsing:** TODO: Document.
+**Parsing:** Nontrivial parser and lexer written in raw C++.
 
 **Turing complete:** Definitely!
 
-**How is it run:** Has multiple levels interpretors where later stages are used for more frequently called code, all the latter of which compiles into machine code:
+**How is it run:** Has multiple [levels of interpretors](https://webkit.org/blog/3362/introducing-the-webkit-ftl-jit/) where later stages are used for more frequently called code, all the latter of which compiles into machine code:
 
-1. *LLInt* Quick start through interpretation of a high-level bytecode. 
-2. *Baseline* Removes the overhead of interpreting the LLInt bytecode.
-3. *DFG* Removes overheads of the same type system and common-cases of method calls. 
-4. *FTL* Thorough optimization of machine code via *B3* and *Air* intermediate languages. 
+1. *[LLInt](https://webkit.org/blog/189/announcing-squirrelfish/)* Quick start through interpretation of a high-level bytecode. 
+2. *[Baseline](https://webkit.org/blog/214/introducing-squirrelfish-extreme/)* Removes the overhead of interpreting the LLInt bytecode.
+3. *[DFG](https://webkit.org/blog/6756/es6-feature-complete/)* Removes overheads of the same type system and common-cases of method calls. 
+4. *[FTL](https://webkit.org/blog/5852/introducing-the-b3-jit-compiler/)* Thorough optimization of machine code via *B3* and *Air* intermediate languages. 
 
 Each of these have their own bytecode. 
 
@@ -153,7 +153,7 @@ Each of these have their own bytecode.
 
 **Turing complete:** Definitely!
 
-**Parsing:** Little to no need. However there is need to hide the relative sloooowness of RAM. 
+**Parsing:** Little to no need. However there is a need to hide the relative sloooowness of RAM. 
 
 **How is it run:** Traditionally used the electrical equivalent of a switch statement for interpretation.
 
@@ -168,4 +168,4 @@ Sure, it's true that I'm now using a large number of languages to implement the 
 
 What this all means is that rather than the code for those pages prescribing the steps to take to display that data, I'll be able to simply say what data I want displayed, how it is structured, and how it should be displayed. 
 
-This should in turn should both make it a lot easier to develop these pages, and since HTML, CSS, and JavaScript *are* what makes up webpages using them should make these pages feel like part of the Web. And if they feel like part of the web rather than part of Odysseus, maybe Odysseus will appear just a little bit simpler. 
+This should in turn should both make it a lot easier to develop these pages and, since this is how practically any webpage works, using them should make these pages feel like part of the Web. And if they feel like part of the web rather than part of Odysseus, maybe Odysseus will appear just a little bit simpler as it gains new features.
