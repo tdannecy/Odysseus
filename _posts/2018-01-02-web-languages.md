@@ -164,7 +164,7 @@ Not worth describing here.
 
 ## Summary
 
-Sure, it's true that I'm now using a large number of languages to implement the internal pages for Odysseus. But each of these languages addresses their problemspace very well, with specifically targetted syntax and internal optimizations. 
+Sure, it's true that I'm now using a large number of languages to implement the internal pages for Odysseus. But each of these languages addresses their problemspace very well, with specifically targetted syntax and internal optimizations. In many cases this is done by compiling down into lower-level bytecodes or trees which resemble their own languages. 
 
 What this all means is that rather than the code for those pages prescribing the steps to take to display that data, I'll be able to simply say what data I want displayed, how it is structured, and how it should be displayed. 
 
