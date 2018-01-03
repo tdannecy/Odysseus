@@ -22,7 +22,7 @@ Having done this, I have successfully pulled together the full suite of language
 
 **Paradigm:** Specify a condition/ordering/grouping/etc that output data must match. 
 
-**Turing Completeness:** Not practically. 
+**Turing Completeness:** Not practically. Though it is thanks to it's `WITH` clauses.
 
 **Parsing:** Using [Lemon](http://www.hwaci.com/sw/lemon/) DSL. 
 
@@ -53,6 +53,8 @@ Having done this, I have successfully pulled together the full suite of language
 **Turing Completeness:** Yes, once I enable the `{ % block %}` tag. 
 
 **Parsing:** Two levels of manually written lexers, and a reentrant parser dispatching the logic to registered [tags](https://github.com/alcinnz/Odysseus/wiki/Templating-Reference).
+
+Includes [topdown operator precedance](http://effbot.org/zone/simple-top-down-parsing.htm) parsing ontop of the lexer, which handles reading conditions. 
 
 **How is it run:** Dynamic dispatch on the AST. Theoretically slow, but makes up for it by avoiding allocating & copying memory. 
 
