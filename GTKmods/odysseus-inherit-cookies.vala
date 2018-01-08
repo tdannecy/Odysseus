@@ -24,6 +24,8 @@ public void gtk_module_init ([CCode (array_length_cname = "argc", array_length_p
         var self = (Soup.Session) param_values[0];
         var cookie_trail = Path.build_path(Path.DIR_SEPARATOR_S,
                 Environment.get_user_config_dir(), "com.github.alcinnz.odysseus", "ui.sqlite");
-        self.add_feature(new CookieJarDB(cookie_trail, true));
-    });
+        self.add_feature(new Soup.CookieJarDB(cookie_trail, true));
+
+        return true;
+    }, null);
 }
