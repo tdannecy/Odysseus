@@ -54,5 +54,9 @@ namespace Odysseus.Traits {
             }
             return false;
         });
+
+        // Fix for the "deepweb" (authenticated sites)
+        var mods = Environment.get_variable("GTK_MODULES") + ":odysseus-inherit-cookies";
+        Environment.set_variable("GTK_MODULES", mods, true);
     }
 }
