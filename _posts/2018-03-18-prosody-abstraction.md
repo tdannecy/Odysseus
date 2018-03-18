@@ -9,7 +9,7 @@ categories: dev
 
 Now I'm seriously beginning to work with the Prosody templating language (it's basically just Django's) I defined early on in Odysseus development, and now I'm seriously starting to use it. To discover it's strengths and weaknesses, and how I can make it best suited to my work.
 
-And as such I've been improving Prosody. I spotted opportunities for some simple refactoring, added some new behaviours, and some new tags. One of these new tags is called {% random %} and is used to randomly choose a useful tip to render to the bottom of the [newtab page](odysseus:home). But beyond that to truly understand the improvements I made you need to go deep into how Prosody works. 
+And as such I've been improving Prosody. I spotted opportunities for some simple refactoring, added some new behaviours, and some new tags. One of these new tags is called `{%% random %%}` and is used to randomly choose a useful tip to render to the bottom of the [newtab page](odysseus:home). But beyond that to truly understand the improvements I made you need to go deep into how Prosody works. 
 
 ## Querying the database
 
@@ -56,7 +56,7 @@ And by doing so, I was given the opportunity to tidyup some other ugly code arou
 
 `{%% ifchanged %%}` is a template tag that tracks the values it's seen in the previous loop iteration and checks if it's changed. In [odysseus:history](odysseus:history) it's used to highlight changes in particular date segments. However that led to code which repeatedly formated the same date just to decided whether to wrap it with `<strong>` HTML tags.
 
-To address this I built a `{%% macro %%}` tag by which templates can define their own template tag, and have the body of the `{%% macro %%}` be inlined there with specified variables (re)defined. The inlining was vital because if I had each invocation share the same template AST, then the `{%% ifchanged %%}` tag would see the values from the last call to that macro and not the last iteration through the loop. (This works differently from Django due to Vala's more rigid type system, in that the previous values are stored in the AST node itself rather than the data context)
+To address this I built a `{%% macro %%}` tag by which templates can define their own template tag, and have the body of the `{%% macro %%}` be inlined there with specified variables (re)defined. The inlining was vital because if I had each invocation share the same template AST, then the `{%% ifchanged %%}` tag would see the values from the last call to that macro and not the last iteration through the loop. (This works differently from Django due to Vala's more rigid type system, in that the previous values are stored in the AST node itself rather than the data context. This leads to some quirkiness around the first iteration, but that's easier to design around then fix.)
 
 The new macros are added to a template tag library local rather than the global one to the template being parsed, after checking that it won't accidentally redefine a tag. And it makes sure the local tag library is available within the macro, though recursion would cause Odysseus to crash (I might want to error check that better).
 
