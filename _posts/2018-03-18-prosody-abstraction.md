@@ -9,20 +9,20 @@ categories: dev
 
 Now I'm seriously beginning to work with the Prosody templating language (it's basically just Django's) I defined early on in Odysseus development, and now I'm seriously starting to use it. To discover it's strengths and weaknesses, and how I can make it best suited to my work.
 
-And as such I've been improving Prosody. I spotted opportunities for some simple refactoring, added some new behaviours, and some new tags. One of these new tags is called `{%% random %%}` and is used to randomly choose a useful tip to render to the bottom of the [newtab page](odysseus:home). But beyond that to truly understand the improvements I made you need to go deep into how Prosody works. 
+And as such I've been improving Prosody. I spotted opportunities for some simple refactoring, added some new behaviours, and some new tags. One of these new tags is called `{ % random % }` and is used to randomly choose a useful tip to render to the bottom of the [newtab page](odysseus:home). But beyond that to truly understand the improvements I made you need to go deep into how Prosody works. 
 
 ## Querying the database
 
 Database queries are something I had working in Odysseus since version 1.1.0 (though I blogged about my efforts there much earlier), but they are a vital component of the [odysseus:history](odysseus:history) page I've been working on and are important to understand for later in this artical.
 
-These queries can be performed in Prosody by surrounding them with `{%% query %%}` and `{%% endquery %%}` template tags, where `{%% each-row %%}` and `{%% empty %%}` tags can precede the `{%% endquery %%}` tag to describe how to format the results into HTML. However that initial section where you write your SQL doesn't accept any template tags, only variables, for reasons I'll get to shortly. `{%% query %%}` handles reporting errors itself.
+These queries can be performed in Prosody by surrounding them with `{ % query % }` and `{ % endquery % }` template tags, where `{ % each-row % }` and `{ % empty % }` tags can precede the `{ % endquery % }` tag to describe how to format the results into HTML. However that initial section where you write your SQL doesn't accept any template tags, only variables, for reasons I'll get to shortly. `{ % query % }` handles reporting errors itself.
 
-Behind the scenes once the `{%% query %%}` tag is parsed, it compiles that initial section done into a precompiled SQLite statement. Then whenever the template is rendered the Prosody variables are loaded into the prepared statement, and the results from running said statement are iterated over and passed back into Prosody (via an adaptor to Prosody's datamodel) for rendering to HTML.
+Behind the scenes once the `{ % query % }` tag is parsed, it compiles that initial section done into a precompiled SQLite statement. Then whenever the template is rendered the Prosody variables are loaded into the prepared statement, and the results from running said statement are iterated over and passed back into Prosody (via an adaptor to Prosody's datamodel) for rendering to HTML.
 
 This technique of using precompiled SQLite statements both improves performance (because the work SQLite does optimizing queries no longer needs to be done each time the page is rerendered) and resiliant (as this helps SQLite keep the SQL syntax clear from the data we're embedding into it). Furthermore if it was being used on real website doing this would be vital for security, as attackers could purposefully confuse SQLite this way in order to access data they shouldn't. But great care is taken that noone other than you can see the pages Prosody renders, so that isn't a concern.
 
 ### Database schema versioning
-The database consulted by `{%% query %%}` is initialized on application start with a sequence of SQL statements provided by a special template. This template is provided a schema version number stored in the header of the database file (yes, an SQLite database is one file) and once it's done it stores a new version number in that header. Said template then uses comparison checks (and not much else) to avoid reexecuting previous statements.
+The database consulted by `{ % query % }` is initialized on application start with a sequence of SQL statements provided by a special template. This template is provided a schema version number stored in the header of the database file (yes, an SQLite database is one file) and once it's done it stores a new version number in that header. Said template then uses comparison checks (and not much else) to avoid reexecuting previous statements.
 
 ## Paginating browser history
 
@@ -42,7 +42,7 @@ TDOP does meanwhile require a pass to translate tokens (given by the smartsplitt
 
 ---
 
-These expressions are then integrated into the Prosody syntax via the `{%% if %%}` tag (which may be followed by `{%% elif %%}` tags and an `{%% else %%}` before it's closing `{%% endif %%}`). There's not much special about this tag beyond this fact.
+These expressions are then integrated into the Prosody syntax via the `{ % if % }` tag (which may be followed by `{ % elif % }` tags and an `{ % else % }` before it's closing `{ % endif % }`). There's not much special about this tag beyond this fact.
 
 In [odysseus:history](odysseus:history) this is used to determine whether to render a link to a given page number or to highlight it as the current one.
 
@@ -52,21 +52,21 @@ Once I integrated search (as described in yesterday's blogpost), I found there w
 
 And by doing so, I was given the opportunity to tidyup some other ugly code around highlighting the date changes.
 
-### Abstracting around `{%% ifchanged %%}`
+### Abstracting around `{ % ifchanged % }`
 
-`{%% ifchanged %%}` is a template tag that tracks the values it's seen in the previous loop iteration and checks if it's changed. In [odysseus:history](odysseus:history) it's used to highlight changes in particular date segments. However that led to code which repeatedly formated the same date just to decided whether to wrap it with `<strong>` HTML tags.
+`{ % ifchanged % }` is a template tag that tracks the values it's seen in the previous loop iteration and checks if it's changed. In [odysseus:history](odysseus:history) it's used to highlight changes in particular date segments. However that led to code which repeatedly formated the same date just to decided whether to wrap it with `&lt;strong&gt;` HTML tags.
 
-To address this I built a `{%% macro %%}` tag by which templates can define their own template tag, and have the body of the `{%% macro %%}` be inlined there with specified variables (re)defined. The inlining was vital because if I had each invocation share the same template AST, then the `{%% ifchanged %%}` tag would see the values from the last call to that macro and not the last iteration through the loop. (This works differently from Django due to Vala's more rigid type system, in that the previous values are stored in the AST node itself rather than the data context. This leads to some quirkiness around the first iteration, but that's easier to design around then fix.)
+To address this I built a `{ % macro % }` tag by which templates can define their own template tag, and have the body of the `{ % macro % }` be inlined there with specified variables (re)defined. The inlining was vital because if I had each invocation share the same template AST, then the `{ % ifchanged % }` tag would see the values from the last call to that macro and not the last iteration through the loop. (This works differently from Django due to Vala's more rigid type system, in that the previous values are stored in the AST node itself rather than the data context. This leads to some quirkiness around the first iteration, but that's easier to design around then fix.)
 
-The new macros are added to a template tag library local rather than the global one to the template being parsed, after checking that it won't accidentally redefine a tag. And it makes sure the local tag library is available within the macro, though recursion would cause Odysseus to crash (I might want to error check that better).
+The new macros are added to a template tag library local to the template being parsed rather than the global one, after checking that it won't accidentally redefine a tag. And it makes sure the local tag library is available within the macro, though recursion would cause Odysseus to crash (I might want to error check that better).
 
-To define variables for the macros, I wrapped the inlined template with a newly generated `{%% with %%}` tag. `{%% with %%}` in turn runs that subtemplate with a new data context which lazily computes variable values when it's first fetched. That wasn't consciously a performance improvement, it's just what I found easiest to implement.
+To define variables for the macros, I wrapped the inlined template with a newly generated `{ % with % }` tag. `{ % with % }` in turn runs that subtemplate with a new data context which lazily computes variable values when it's first fetched. That wasn't consciously a performance improvement, it's just what I found easiest to implement.
 
-### Abstracting over `{%% query %%}`
+### Abstracting over `{ % query % }`
 
-Abstracting over `{%% ifchanged %%}` was very nice, but it was vital that I abstracted over `{%% query %%}`, which involved teaching `{%% query %%}` how to handle `{%% with %%}` tags (which are also generated by both macros and translations).
+Abstracting over `{ % ifchanged % }` was very nice, but it was vital that I abstracted over `{ % query % }`, which involved teaching `{ % query % }` how to handle `{ % with % }` tags (which are also generated by both macros and translations). And having macros inline their subtemplate gave `{ % query % }` one less thing to worry about  
 
-It wasn't hard to extend the code compiling Prosody into SQL with a corresponding array of Prosody-variable arguments to make this work, as I found I could easily capture the variables from within the `{%% with %%}`'s body. But it was tricky to inline the context variables into those captured ones from inside the macro.
+It wasn't hard to extend the code compiling Prosody into SQL with a corresponding array of Prosody-variable arguments to make this work, as I found I could easily capture the variables from within the `{ % with % }`'s subtemplate. But it was tricky to inline the context variables into those captured from inside the macro.
 
 You see, a variable in Prosody consists of a variable path OR a literal value followed by a pipeline of "filters", some of which are given a single<sup title="This was easier to implement, I'm not finding it constraining, and I like the syntax.">1</sup> additional argument. So while often the variable wouldn't need rewriting or could simply be replaced with one from the context being inlined, there can be a tricky situation where additional path traversal needs to be inserted between the pipeline for the variable being inlined and the one it's being inlined into. For that I implemented an internal filter that performs path traveral in the middle of the pipeline.
 
